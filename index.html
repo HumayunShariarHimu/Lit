@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./lit-min.css">
+  <link rel="stylesheet" href="./lit_style_one.css">
+  <link rel="stylesheet" href="./lit_style_two.css">
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <main id="app">
+    <section class="container">
+      <div class="form-wrapper">
+        <form @submit.prevent="speakPhrase">
+          <div class="text-input-wrapper">
+            <button type="button" class="clear-input" :class="{'is-shown': clearButtonVisible}" title="Clear"
+              @click.prevent="clearInput">
+              <span>&times;</span>
+            </button>
+            <input type="text" v-model="phrase" @focus="showClearButton" @input="showClearButton"
+              placeholder="Say Something...">
+          </div>
+          <input class="button" type="submit" value="Speak" title="Speak">
+        </form>
+      </div>
+
+      <div class="visualizer">
+        <div class="eyes">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="mouth">
+          <div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- partial -->
+  <script src='./lit_script_one.js'></script>
+  <script src='./lit_script_two.js'></script>
+  <script src='./lit_script_three.js'></script>
+  <script src="./lit_script_four.js"></script>
+
+</body>
+
+</html>
